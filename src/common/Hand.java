@@ -12,6 +12,10 @@ public class Hand implements Comparable<Hand> {
 		playerName = name;
 	}
 	
+	public String getName() {
+		return playerName;
+	}
+	
 	public void takeOne(CardSet cardSet) {
 		if (hold.size() > 3) return;
 		hold.add(cardSet.drawOne());
