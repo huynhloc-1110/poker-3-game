@@ -5,9 +5,11 @@ import java.util.*;
 public class Hand implements Comparable<Hand> {
 	
 	private ArrayList<Card> hold;
+	private String playerName;
 	
-	public Hand() {
+	public Hand(String name) {
 		hold = new ArrayList<>();
+		playerName = name;
 	}
 	
 	public void takeOne(CardSet cardSet) {
@@ -26,6 +28,7 @@ public class Hand implements Comparable<Hand> {
 			sum += card.getRank().getValue();
 			if (card.getRank().isFaceCard()) faceCardNum++;
 		}
+		sum %= 10;
 		if (faceCardNum == 3) sum++;
 		return sum;
 	}
@@ -33,5 +36,10 @@ public class Hand implements Comparable<Hand> {
 	@Override
 	public int compareTo(Hand cmp) {
 		return this.totalValue() - cmp.totalValue();
+	}
+	
+	@Override
+	public String toString() {
+		return "\nPlayer %s:\n " + hold + "\nTotal card value: " + totalValue() + "\n"; 
 	}
 }
