@@ -44,6 +44,6 @@ public class Hand implements Comparable<Hand> {
 	
 	@Override
 	public String toString() {
-		return "\nPlayer " + playerName + ":\n " + hold + "\nTotal card value: " + totalValue() + "\n"; 
+		return "Player " + playerName + ":\n " + hold + "\nTotal card value: " + totalValue() + "\n"; 
 	}
 }

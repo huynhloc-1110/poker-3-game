@@ -45,7 +45,7 @@ public class Game {
 		}
 		
 		//display the winner
-		System.out.print("\nThe winner: ");
+		System.out.print("The winner: ");
 		for (Hand winner : winners) {
 			System.out.print(winner.getName() + " ");
 		}
