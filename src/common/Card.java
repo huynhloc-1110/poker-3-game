@@ -10,8 +10,12 @@ public class Card {
 		this.suit = suit;
 	}
 	
-	public int getValue() {
-		return rank.getValue();
+	public Rank getRank() {
+		return rank;
+	}
+	
+	public Suit getSuit() {
+		return suit;
 	}
 	
 	@Override
