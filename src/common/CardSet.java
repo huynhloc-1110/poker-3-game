@@ -28,7 +28,9 @@ public class CardSet {
 	}
 	
 	public Card drawOne() {
-		return cardSet.get(0);
+		Card returnCard = cardSet.get(0);
+		cardSet.remove(0);
+		return returnCard;
 	}
 	
 	@Override
