@@ -33,7 +33,7 @@ public class Hand implements Comparable<Hand> {
 			if (card.getRank().isFaceCard()) faceCardNum++;
 		}
 		sum %= 10;
-		if (faceCardNum == 3) sum++;
+		if (faceCardNum == 3) sum = 10;
 		return sum;
 	}
 
