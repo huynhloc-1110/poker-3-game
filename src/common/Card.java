@@ -10,6 +10,10 @@ public class Card {
 		this.suit = suit;
 	}
 	
+	public int getValue() {
+		return rank.getValue();
+	}
+	
 	@Override
 	public String toString() {
 		return "Rank: " + rank + ", Suit: " + suit;
